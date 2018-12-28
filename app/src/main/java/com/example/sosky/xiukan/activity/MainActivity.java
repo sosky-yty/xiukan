@@ -134,7 +134,7 @@ public class MainActivity extends SecureActivity {
                         new PrimaryDrawerItem().withIdentifier(ID_RANk).withName("大师排行榜").withTag("Rank").withIcon(R.drawable.ic_menu_rank).withIconTintingEnabled(true).withSelectable(false)
                 )
                 .withSelectedItem(ID_HOME)
-                .withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
+                .withOnDrawerItemClickListener( new Drawer.OnDrawerItemClickListener() {
                     @Override
                     public boolean onItemClick(View view, int position, IDrawerItem drawerItem) {
                         idOfDrawerItem = (int) drawerItem.getIdentifier();
