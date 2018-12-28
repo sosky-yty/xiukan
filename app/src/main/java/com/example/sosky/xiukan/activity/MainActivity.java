@@ -2,7 +2,6 @@ package com.example.sosky.xiukan.activity;
 
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.Menu;
@@ -57,7 +56,7 @@ public class MainActivity extends SecureActivity {
     public static final int ID_RELEASED = 4;
     public static final int ID_ACTRESSES = 5;
     public static final int ID_GENRE = 6;
-    public static final int ID_GITHUB = 7;
+    public static final int ID_RANk = 7;
 
     public static final Map<Integer, Class<? extends Fragment>> FRAGMENTS = new HashMap<Integer, Class<? extends Fragment>>() {{
         put(ID_HOME, HomeFragment.class);
@@ -132,7 +131,7 @@ public class MainActivity extends SecureActivity {
                         new PrimaryDrawerItem().withIdentifier(ID_ACTRESSES).withName("女优").withIcon(R.drawable.ic_menu_actresses).withIconTintingEnabled(true),
                         new PrimaryDrawerItem().withIdentifier(ID_GENRE).withName("类别").withIcon(R.drawable.ic_menu_genre).withIconTintingEnabled(true),
                         new DividerDrawerItem(),
-                        new PrimaryDrawerItem().withIdentifier(ID_GITHUB).withName("GitHub").withTag("Github").withIcon(R.drawable.ic_menu_github).withIconTintingEnabled(true).withSelectable(false)
+                        new PrimaryDrawerItem().withIdentifier(ID_RANk).withName("大师排行榜").withTag("Rank").withIcon(R.drawable.ic_menu_rank).withIconTintingEnabled(true).withSelectable(false)
                 )
                 .withSelectedItem(ID_HOME)
                 .withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
@@ -141,10 +140,10 @@ public class MainActivity extends SecureActivity {
                         idOfDrawerItem = (int) drawerItem.getIdentifier();
 
                         switch ((int) drawerItem.getIdentifier()) {
-                            case ID_GITHUB: {
-                                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/SplashCodes/JAViewer/releases"));
-                                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                                startActivity(intent);
+                            case ID_RANk: {
+                                AlertDialog dialog = new AlertDialog.Builder(MainActivity.this).setTitle("敬请期待")
+                                        .setMessage("待爷加上账号系统就有排行榜啦！看看到底谁才是阅片无数，哈哈哈哈哈哈").create();
+                                dialog.show();
                                 break;
                             }
                             case ID_FAV: {

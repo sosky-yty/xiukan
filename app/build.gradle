@@ -7,7 +7,7 @@ android {
         applicationId "com.example.sosky.xiukan"
         minSdkVersion 16
         targetSdkVersion 28
-        versionCode 1
+        versionCode 99
         versionName "1.0"
     }
     buildTypes {

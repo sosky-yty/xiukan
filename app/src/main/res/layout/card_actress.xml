@@ -16,7 +16,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <io.github.javiewer.view.ActressScaleImageView
+        <com.example.sosky.xiukan.view.SimpleSearchView
             android:id="@+id/actress_img"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
