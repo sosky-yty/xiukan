@@ -20,9 +20,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 
-/**
- * Project: JAViewer
- */
+
 public abstract class RecyclerFragment<I, LM extends RecyclerView.LayoutManager> extends Fragment {
     @BindView(R.id.recycler_view)
     protected RecyclerView mRecyclerView;
